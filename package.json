@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/khorajiya05/Asktopea/issues"
   },
-  "homepage": "https://github.com/khorajiya05/Asktopea#readme"
+  "homepage": "https://github.com/khorajiya05/Asktopea#readme",
+  "dependencies": {
+    "mongoose": "^6.2.3"
+  }
 }
