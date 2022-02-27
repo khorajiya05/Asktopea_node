@@ -5,6 +5,7 @@ const sessionController = require("./controller/session-controller")
 const roleController = require("./controller/role-controller")
 const userController = require("./controller/user-controller")
 const questionController = require("./controller/question-controller")
+const answerController = require("./controller/answer-controller")
 
 
 const app = express()
@@ -54,6 +55,15 @@ app.put("/users",userController.updateUser)
 
 //question
 app.post("/question",questionController.addQuestion)
+app.get("/question",questionController.getAllQue)
+app.put("/question",questionController.updateQue)
+app.delete("/question",questionController.deleteQue)
+
+//answere
+app.post("/answere",answerController.addAnswer)
+app.get("/answere",answerController.getAllAnswer)
+app.put("/answere",answerController.updateAnswer)
+app.delete("/answere:ansId",answerController.deleteAnswer)
 
 
 app.listen(3002,function(){

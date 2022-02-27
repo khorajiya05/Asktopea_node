@@ -1,9 +1,8 @@
 const RoleModel = require("../model/role-model")
 
 
-
+//insert role
 module.exports.addRole = function (req,res){
-    //db insert role
     console.log(req.body.roleName);
     
     let role = new RoleModel({
