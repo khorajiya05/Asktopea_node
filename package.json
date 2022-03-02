@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/khorajiya05/Asktopea#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "mongoose": "^6.2.3"
   }
 }

@@ -6,6 +6,7 @@ const roleController = require("./controller/role-controller")
 const userController = require("./controller/user-controller")
 const questionController = require("./controller/question-controller")
 const answerController = require("./controller/answer-controller")
+const rewardController = require("./controller/reward-controller")
 
 
 const app = express()
@@ -63,9 +64,15 @@ app.delete("/question",questionController.deleteQue)
 app.post("/answere",answerController.addAnswer)
 app.get("/answere",answerController.getAllAnswer)
 app.put("/answere",answerController.updateAnswer)
-app.delete("/answere:ansId",answerController.deleteAnswer)
+app.delete("/answere/:ansId",answerController.deleteAnswer)
+
+//reward
+app.post("/reward",rewardController.giveReward)
+app.put("/reward",rewardController.updateReward)
+app.get("/reward",rewardController.getReward)
+app.delete("/reward/:rewId",rewardController.deleteReward)
 
 
-app.listen(3002,function(){
-  console.log("server started on 3002");  
+app.listen(3000,function(){
+  console.log("server started on 3000");  
 })
